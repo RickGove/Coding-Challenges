@@ -3,7 +3,6 @@ function binarySearch(arr, q, le, ri) {
 	let l = le || 0,
 		r = ri || arr.length - 1,
 		m = Math.floor((r + l) / 2);
-	console.log(l, m, r);
 
 	// check if the middle is q
 	if (arr[m] === q) {
@@ -47,6 +46,6 @@ function binarySearchB(arr, k, s, e) {
 }
 
 let arr = [1, 2, 3, 55, 66, 88, 100, 652, 999, 5000, 66666, 9898989],
-	q = 1;
+	q = 9;
 
-console.log(binarySearch(arr, q));
+console.log(binarySearchB(arr, q));
