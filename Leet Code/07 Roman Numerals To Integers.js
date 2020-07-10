@@ -64,14 +64,27 @@ function romanToInt(int, rom = '') {
 	if (newQ === 0) {
 		return romanNumeral;
 	} else {
-		romanToInt(newQ, romanNumeral);
+		return romanToInt(newQ, romanNumeral);
 	}
-
-	return romanNumeral;
 }
 
-const rom = 2328;
-console.log(romanToInt(rom));
+const numberToRoman = (num, rom = '') => {
+	console.log(num, rom);
+	let convArr = [
+		[1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000],
+		['I', 'IV', 'V', 'IX', 'X', 'XL', 'L', 'XC', 'C', 'CD', 'D', 'CM', 'M'],
+	];
+	if (num === 0) return rom;
+	for (var i = convArr[0].length - 1; i >= 0; i--) {
+		console.log(num, convArr[0][i]);
+		if (num >= convArr[0][i]) {
+			return numberToRoman(num - convArr[0][i], rom + convArr[1][i]);
+		}
+	}
+};
+
+const rom = 3;
+console.log(numberToRoman(rom));
 // let answer = romanToInt(rom);
 // console.log(`The solution is ${answer}`);
 
