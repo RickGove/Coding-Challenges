@@ -28,7 +28,7 @@ var isPalindrome = function (x) {
 	}
 	return true;
 };
-let x = -665566;
+let x = 'hello';
 // console.log(isPalindrome(121)); // true
 // console.log(isPalindrome(-121)); // false
 // console.log(isPalindrome(10)); // false;
